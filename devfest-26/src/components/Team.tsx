@@ -1,55 +1,61 @@
 import { useEffect, useRef } from 'react'
+import dilumPhoto from '../assets/team/dilum.jpeg'
+import juliusPhoto from '../assets/team/julius.jpeg'
+import nickPhoto from '../assets/team/nick.jpeg'
+import ramodPhoto from '../assets/team/ramod.jpeg'
+import vishwajithPhoto from '../assets/team/vishwajith.jpeg'
+import pasinduPhoto from '../assets/team/pasindu.jpeg'
 
 interface TeamMember {
   name: string
   role: string
-  initials: string
+  photo: string
+  linkedin: string
   accentColor: string
-  accentRgba: string
 }
 
 const COMMUNITY_LEADS: TeamMember[] = [
   {
     name: 'Dilum De Silva',
-    role: 'President / GDG Organizer',
-    initials: 'DD',
+    role: 'Lead Organizer',
+    photo: dilumPhoto,
+    linkedin: 'https://www.linkedin.com/in/dilumdesilva/',
     accentColor: '#4285F4',
-    accentRgba: 'rgba(66,133,244,0.15)',
+  },
+  {
+    name: 'Julius Spencer',
+    role: 'Organizer',
+    photo: juliusPhoto,
+    linkedin: 'https://www.linkedin.com/in/juliusspencer/',
+    accentColor: '#EA4335',
   },
   {
     name: 'Nic Tolentino',
-    role: 'Vice President / GDG Organizer',
-    initials: 'NT',
-    accentColor: '#EA4335',
-    accentRgba: 'rgba(234,67,53,0.15)',
-  },
-  {
-    name: 'Jess Lowe',
-    role: 'Community Organizer',
-    initials: 'JL',
+    role: 'Organizer',
+    photo: nickPhoto,
+    linkedin: 'https://www.linkedin.com/in/nic-tolentino/',
     accentColor: '#FBBC05',
-    accentRgba: 'rgba(251,188,5,0.12)',
   },
   {
-    name: 'Ramod K',
-    role: 'Technical Organizer',
-    initials: 'RK',
+    name: 'Ramod Kaushan',
+    role: 'Organizer',
+    photo: ramodPhoto,
+    linkedin: 'https://www.linkedin.com/in/ramod-kaushan/',
     accentColor: '#34A853',
-    accentRgba: 'rgba(52,168,83,0.15)',
   },
   {
-    name: 'Pasindu W',
-    role: 'Community Organizer',
-    initials: 'PW',
+    name: 'Vishwajith Kasthoori',
+    role: 'Volunteer',
+    photo: vishwajithPhoto,
+    linkedin: 'https://www.linkedin.com/in/vishwajithsandaru/',
     accentColor: '#4285F4',
-    accentRgba: 'rgba(66,133,244,0.15)',
   },
   {
-    name: 'Sandaru V',
-    role: 'Operations Organizer',
-    initials: 'SV',
+    name: 'Pasindu Fernando',
+    role: 'Volunteer',
+    photo: pasinduPhoto,
+    linkedin: 'https://www.linkedin.com/in/pasindu-anthony-80b489180/',
     accentColor: '#4285F4',
-    accentRgba: 'rgba(66,133,244,0.15)',
   },
 ]
 
@@ -73,7 +79,6 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
       },
       { threshold: 0.1 }
     )
-
     if (cardRef.current) observer.observe(cardRef.current)
     return () => observer.disconnect()
   }, [])
@@ -83,18 +88,19 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
       className="reveal glass-card"
       ref={cardRef}
       style={{
-        padding: '28px 22px',
+        padding: '24px 20px',
         borderRadius: 14,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
         gap: 14,
         transitionDelay: `${delay}ms`,
-        cursor: 'default',
+        position: 'relative',
+        transition: 'border-color 0.3s ease, transform 0.3s ease',
       }}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.borderColor = member.accentColor + '44'
+        el.style.borderColor = member.accentColor + '55'
         el.style.transform = 'translateY(-4px)'
       }}
       onMouseLeave={e => {
@@ -103,31 +109,22 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
         el.style.transform = 'translateY(0)'
       }}
     >
-      {/* Avatar */}
-      <div
+      {/* Photo avatar */}
+      <img
+        src={member.photo}
+        alt={member.name}
         style={{
-          width: 52,
-          height: 52,
+          width: 60,
+          height: 60,
           borderRadius: '50%',
-          background: member.accentRgba,
-          border: `1.5px solid ${member.accentColor}40`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontFamily: '"Space Grotesk", sans-serif',
-          fontWeight: 600,
-          fontSize: 16,
-          color: member.accentColor,
-          letterSpacing: '0.5px',
+          objectFit: 'cover',
+          border: `2px solid ${member.accentColor}40`,
           flexShrink: 0,
         }}
-        aria-hidden="true"
-      >
-        {member.initials}
-      </div>
+      />
 
       {/* Info */}
-      <div>
+      <div style={{ flex: 1 }}>
         <div
           style={{
             fontFamily: '"Space Grotesk", sans-serif',
@@ -152,20 +149,39 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
         </div>
       </div>
 
-      {/* Accent dot */}
-      <div
+      {/* LinkedIn link */}
+      <a
+        href={member.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${member.name} on LinkedIn`}
         style={{
-          width: 6,
-          height: 6,
-          borderRadius: '50%',
-          background: member.accentColor,
-          boxShadow: `0 0 8px ${member.accentColor}80`,
           position: 'absolute',
           top: 18,
           right: 18,
+          width: 28,
+          height: 28,
+          borderRadius: '50%',
+          background: 'rgba(245,245,247,0.06)',
+          border: '1px solid rgba(245,245,247,0.10)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          transition: 'background 0.25s ease, border-color 0.25s ease',
         }}
-        aria-hidden="true"
-      />
+        onMouseEnter={e => {
+          e.currentTarget.style.background = 'rgba(66,133,244,0.15)'
+          e.currentTarget.style.borderColor = 'rgba(66,133,244,0.4)'
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.background = 'rgba(245,245,247,0.06)'
+          e.currentTarget.style.borderColor = 'rgba(245,245,247,0.10)'
+        }}
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" width={13} height={13} style={{ color: '#8d8f96' }}>
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+      </a>
     </div>
   )
 }
@@ -186,7 +202,6 @@ export default function Team() {
       },
       { threshold: 0.1 }
     )
-
     if (headRef.current) observer.observe(headRef.current)
     if (campusRef.current) observer.observe(campusRef.current)
     return () => observer.disconnect()
@@ -203,11 +218,7 @@ export default function Team() {
       }}
     >
       {/* Header */}
-      <div
-        className="reveal"
-        ref={headRef}
-        style={{ marginBottom: 56 }}
-      >
+      <div className="reveal" ref={headRef} style={{ marginBottom: 56 }}>
         <div className="kicker" style={{ marginBottom: 16 }}>
           Organizers
         </div>
@@ -216,7 +227,7 @@ export default function Team() {
         </h2>
       </div>
 
-      {/* Subsection A: Community Leads */}
+      {/* Team grid */}
       <div style={{ marginBottom: 60 }}>
         <div
           style={{
@@ -238,7 +249,6 @@ export default function Team() {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
             gap: 16,
-            position: 'relative',
           }}
         >
           {COMMUNITY_LEADS.map((member, i) => (
@@ -247,7 +257,7 @@ export default function Team() {
         </div>
       </div>
 
-      {/* Subsection B: GDG on Campus */}
+      {/* GDG on Campus block */}
       <div
         className="reveal glass-card"
         ref={campusRef}
@@ -260,24 +270,11 @@ export default function Team() {
           gap: 24,
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            gap: 4,
-            flexShrink: 0,
-          }}
-          aria-hidden="true"
-        >
+        <div style={{ display: 'flex', gap: 4, flexShrink: 0 }} aria-hidden="true">
           {['#4285F4', '#EA4335', '#FBBC05', '#34A853'].map((c) => (
             <span
               key={c}
-              style={{
-                display: 'block',
-                width: 10,
-                height: 10,
-                borderRadius: '50%',
-                background: c,
-              }}
+              style={{ display: 'block', width: 10, height: 10, borderRadius: '50%', background: c }}
             />
           ))}
         </div>
@@ -306,18 +303,11 @@ export default function Team() {
           >
             Student Leads &amp; Campus Ambassadors
           </div>
-          <p
-            style={{
-              fontSize: 14,
-              color: 'var(--text-dim)',
-              lineHeight: 1.65,
-              maxWidth: 560,
-            }}
-          >
-            Dedicated student leads coordinating logistics, volunteer
-            operations, and student engagement across universities in Tāmaki
-            Makaurau. Our campus ambassadors bridge the gap between industry
-            practitioners and the next generation of Auckland developers.
+          <p style={{ fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.65, maxWidth: 560 }}>
+            Dedicated student leads coordinating logistics, volunteer operations,
+            and student engagement across universities in Tāmaki Makaurau. Our
+            campus ambassadors bridge the gap between industry practitioners and
+            the next generation of Auckland developers.
           </p>
         </div>
       </div>

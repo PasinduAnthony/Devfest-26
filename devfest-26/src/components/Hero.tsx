@@ -11,6 +11,7 @@ interface CountdownCardProps {
 function CountdownCard({ value, label }: CountdownCardProps) {
   return (
     <div
+      className="countdown-card"
       style={{
         display: 'flex',
         flexDirection: 'column',

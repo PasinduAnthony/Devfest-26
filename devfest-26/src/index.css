@@ -215,16 +215,32 @@ a {
     padding-bottom: 48px !important;
   }
 
-  /* Countdown: hide colons, arrange cards 2×2 */
+  /* Countdown: keep single row, shrink cards to fit */
   .countdown-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    justify-items: center !important;
-    gap: 10px !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .countdown-card {
+    padding: 12px 10px !important;
+    min-width: 56px !important;
+    border-radius: 8px !important;
+    gap: 4px !important;
+  }
+
+  .countdown-card span:first-child {
+    font-size: 22px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .countdown-card span:last-child {
+    font-size: 7px !important;
+    letter-spacing: 1px !important;
   }
 
   .countdown-sep {
-    display: none !important;
+    font-size: 18px !important;
+    padding-bottom: 10px !important;
   }
 
   /* Hero eyebrow — tighten letter-spacing on small screens */
