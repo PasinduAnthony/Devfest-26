@@ -165,39 +165,6 @@ export default function Sponsor() {
               </svg>
               Download 2026 Sponsorship Deck
             </a>
-            <a
-              href="mailto:sponsor@gdgauckland.nz"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 8,
-                padding: '14px 28px',
-                borderRadius: 100,
-                fontSize: 14,
-                fontWeight: 500,
-                fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
-                background: 'transparent',
-                color: '#f0f0f0',
-                border: '1px solid rgba(240,240,240,0.14)',
-                transition: 'transform 0.25s ease, border-color 0.25s ease',
-                textAlign: 'center',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = 'translateY(-2px)'
-                e.currentTarget.style.borderColor = 'rgba(240,240,240,0.35)'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = 'translateY(0)'
-                e.currentTarget.style.borderColor = 'rgba(240,240,240,0.14)'
-              }}
-            >
-              <svg viewBox="0 0 16 16" fill="none" width={14} height={14}>
-                <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M2 6l6 4 6-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
-              Contact Partnerships Team
-            </a>
           </div>
         </div>
       </div>

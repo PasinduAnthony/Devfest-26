@@ -420,7 +420,7 @@ export default function Hero() {
               marginBottom: 20,
             }}
           >
-            <span style={{ fontSize: 12 }}>⚡</span>
+            
             Call for Speakers Closes In
           </div>
 
@@ -494,7 +494,9 @@ export default function Hero() {
           }}
         >
           <a
-            href="#cfp"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeUoHvOIhzrXK7pN11uM5pSU-IqAhQUSQXhtqmmxoY_XVsoDA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               padding: '13px 28px',
               borderRadius: 100,

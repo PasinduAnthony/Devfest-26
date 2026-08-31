@@ -196,12 +196,12 @@ export default function FAQ() {
       <div
         className="reveal"
         ref={headRef}
-        style={{ marginBottom: 56 }}
+        style={{ marginBottom: 56, textAlign: 'center' }}
       >
         <div className="kicker" style={{ marginBottom: 16 }}>
           FAQ
         </div>
-        <h2 className="section-heading" style={{ maxWidth: 400 }}>
+        <h2 className="section-heading">
           Everything You Need to Know
         </h2>
       </div>
@@ -212,6 +212,7 @@ export default function FAQ() {
         ref={listRef}
         style={{
           maxWidth: 760,
+          margin: '0 auto',
         }}
       >
         {FAQS.map((faq, i) => (

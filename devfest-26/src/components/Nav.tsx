@@ -79,28 +79,6 @@ export default function Nav() {
           <span style={{ display: 'inline-flex' }}>
             <img src={logoImg} alt="" aria-hidden="true" style={{ height: 28, display: 'block' }} />
           </span>
-          <span
-            style={{
-              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
-              fontWeight: 700,
-              fontSize: 17,
-              letterSpacing: '-0.3px',
-              color: '#f0f0f0',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            DevFest{' '}
-            <span
-              style={{
-                background: 'linear-gradient(90deg, #4285F4, #34A853)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent',
-              }}
-            >
-              Auckland
-            </span>
-          </span>
         </a>
 
         {/* Desktop nav links */}
@@ -133,7 +111,9 @@ export default function Nav() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {/* CTA button */}
           <a
-            href="#cfp"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeUoHvOIhzrXK7pN11uM5pSU-IqAhQUSQXhtqmmxoY_XVsoDA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
             className="nav-submit-btn"
             style={{
               fontSize: 13,
@@ -252,7 +232,9 @@ export default function Nav() {
           </a>
         ))}
         <a
-          href="#cfp"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeUoHvOIhzrXK7pN11uM5pSU-IqAhQUSQXhtqmmxoY_XVsoDA/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => setMenuOpen(false)}
           style={{
             display: 'inline-block',
