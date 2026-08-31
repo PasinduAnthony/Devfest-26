@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import logoImg from '../assets/GDG Logo.png'
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -44,7 +45,7 @@ export default function Nav() {
           left: 0,
           height: '2px',
           width: `${progress}%`,
-          background: 'linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853)',
+          background: 'linear-gradient(90deg, #4285F4, #EA4335, #fbbc04, #34A853)',
           zIndex: 102,
           willChange: 'width',
           transition: 'width 0.1s linear',
@@ -62,36 +63,44 @@ export default function Nav() {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '18px 40px',
-          background: 'rgba(8,9,11,0.72)',
+          background: 'rgba(30,30,30,0.72)',
           backdropFilter: 'blur(16px) saturate(160%)',
           WebkitBackdropFilter: 'blur(16px) saturate(160%)',
-          borderBottom: scrolled ? '1px solid rgba(245,245,247,0.09)' : '1px solid transparent',
+          borderBottom: scrolled ? '1px solid rgba(240,240,240,0.09)' : '1px solid transparent',
           transition: 'border-color 0.4s ease, background 0.4s ease',
         }}
       >
         {/* Logo */}
         <a
           href="#"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            fontFamily: '"Space Grotesk", sans-serif',
-            fontWeight: 600,
-            fontSize: 15,
-            letterSpacing: '0.2px',
-            color: '#f5f5f7',
-            textDecoration: 'none',
-          }}
+          style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', flexShrink: 0 }}
+          aria-label="DevFest Auckland 2026 — home"
         >
-          {/* 4-color Google dot mark */}
-          <span style={{ display: 'flex', gap: 4 }} aria-hidden="true">
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#4285F4', display: 'block' }} />
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#EA4335', display: 'block' }} />
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#FBBC05', display: 'block' }} />
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#34A853', display: 'block' }} />
+          <span style={{ display: 'inline-flex' }}>
+            <img src={logoImg} alt="" aria-hidden="true" style={{ height: 28, display: 'block' }} />
           </span>
-          <span>DevFest Auckland 2026</span>
+          <span
+            style={{
+              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
+              fontWeight: 700,
+              fontSize: 17,
+              letterSpacing: '-0.3px',
+              color: '#f0f0f0',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            DevFest{' '}
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #4285F4, #34A853)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent',
+              }}
+            >
+              Auckland
+            </span>
+          </span>
         </a>
 
         {/* Desktop nav links */}
@@ -131,15 +140,15 @@ export default function Nav() {
               fontWeight: 500,
               padding: '9px 18px',
               borderRadius: 100,
-              background: '#f5f5f7',
-              color: '#08090b',
+              background: '#57caff',
+              color: '#000000',
               transition: 'transform 0.25s ease, opacity 0.25s ease',
               display: 'inline-block',
               whiteSpace: 'nowrap',
             }}
             onMouseEnter={e => {
               e.currentTarget.style.transform = 'translateY(-1px)'
-              e.currentTarget.style.opacity = '0.9'
+              e.currentTarget.style.opacity = '0.85'
             }}
             onMouseLeave={e => {
               e.currentTarget.style.transform = 'translateY(0)'
@@ -169,7 +178,7 @@ export default function Nav() {
                 display: 'block',
                 width: 22,
                 height: 2,
-                background: '#f5f5f7',
+                background: '#f0f0f0',
                 borderRadius: 2,
                 transition: 'transform 0.3s ease, opacity 0.3s ease',
                 transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
@@ -180,7 +189,7 @@ export default function Nav() {
                 display: 'block',
                 width: 22,
                 height: 2,
-                background: '#f5f5f7',
+                background: '#f0f0f0',
                 borderRadius: 2,
                 transition: 'opacity 0.3s ease',
                 opacity: menuOpen ? 0 : 1,
@@ -191,7 +200,7 @@ export default function Nav() {
                 display: 'block',
                 width: 22,
                 height: 2,
-                background: '#f5f5f7',
+                background: '#f0f0f0',
                 borderRadius: 2,
                 transition: 'transform 0.3s ease, opacity 0.3s ease',
                 transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
@@ -210,10 +219,10 @@ export default function Nav() {
           left: 0,
           right: 0,
           zIndex: 99,
-          background: 'rgba(8,9,11,0.97)',
+          background: 'rgba(30,30,30,0.97)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          borderBottom: '1px solid rgba(245,245,247,0.09)',
+          borderBottom: '1px solid rgba(240,240,240,0.09)',
           padding: menuOpen ? '20px 24px 28px' : '0 24px',
           maxHeight: menuOpen ? '400px' : '0',
           overflow: 'hidden',
@@ -230,10 +239,10 @@ export default function Nav() {
               display: 'block',
               padding: '12px 0',
               fontSize: 16,
-              fontFamily: '"Space Grotesk", sans-serif',
+              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
               fontWeight: 500,
               color: 'var(--text-dim)',
-              borderBottom: '1px solid rgba(245,245,247,0.06)',
+              borderBottom: '1px solid rgba(240,240,240,0.06)',
               transition: 'color 0.25s ease',
             }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
@@ -252,8 +261,8 @@ export default function Nav() {
             fontWeight: 500,
             padding: '11px 22px',
             borderRadius: 100,
-            background: '#f5f5f7',
-            color: '#08090b',
+            background: '#57caff',
+            color: '#000000',
           }}
         >
           Submit Session

@@ -17,20 +17,20 @@ function CountdownCard({ value, label }: CountdownCardProps) {
         flexDirection: 'column',
         alignItems: 'center',
         gap: 8,
-        background: 'rgba(16,18,22,0.9)',
+        background: 'rgba(18,18,18,0.9)',
         border: '1px solid rgba(66,133,244,0.35)',
         borderRadius: 12,
         padding: '18px 22px',
-        boxShadow: '0 0 24px rgba(66,133,244,0.12), inset 0 1px 0 rgba(245,245,247,0.04)',
+        boxShadow: '0 0 24px rgba(66,133,244,0.12), inset 0 1px 0 rgba(240,240,240,0.04)',
         minWidth: 80,
       }}
     >
       <span
         style={{
-          fontFamily: '"JetBrains Mono", monospace',
+          fontFamily: '"Roboto Mono", monospace',
           fontWeight: 500,
           fontSize: 'clamp(26px, 4vw, 40px)',
-          color: '#f5f5f7',
+          color: '#f0f0f0',
           lineHeight: 1,
           letterSpacing: '-1px',
         }}
@@ -39,7 +39,7 @@ function CountdownCard({ value, label }: CountdownCardProps) {
       </span>
       <span
         style={{
-          fontFamily: '"JetBrains Mono", monospace',
+          fontFamily: '"Roboto Mono", monospace',
           fontSize: 9,
           letterSpacing: '2px',
           color: 'var(--text-dimmer)',
@@ -107,77 +107,77 @@ function AucklandSkyline() {
 
         {/* Sky Tower — the iconic Auckland landmark */}
         {/* Main tower shaft */}
-        <rect x="688" y="10" width="6" height="140" fill="rgba(245,245,247,0.18)" rx="1" />
+        <rect x="688" y="10" width="6" height="140" fill="rgba(240,240,240,0.18)" rx="1" />
         {/* Tower pod */}
-        <ellipse cx="691" cy="62" rx="14" ry="6" fill="#1c1e25" stroke="rgba(245,245,247,0.09)" strokeWidth="1" />
+        <ellipse cx="691" cy="62" rx="14" ry="6" fill="#1c1e25" stroke="rgba(240,240,240,0.09)" strokeWidth="1" />
         {/* Top mast */}
-        <rect x="690" y="2" width="2" height="12" fill="rgba(245,245,247,0.3)" rx="1" />
+        <rect x="690" y="2" width="2" height="12" fill="rgba(240,240,240,0.3)" rx="1" />
         {/* Beacon light */}
         <circle cx="691" cy="2" r="3" fill="#EA4335" style={{ animation: 'beaconPulse 2.4s ease-out infinite' }} />
 
         {/* Buildings — left side */}
-        <rect x="0" y="140" width="60" height="60" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="65" y="120" width="45" height="80" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="115" y="105" width="35" height="95" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="155" y="130" width="50" height="70" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="210" y="115" width="40" height="85" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="255" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="290" y="100" width="55" height="100" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="350" y="118" width="38" height="82" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="393" y="108" width="42" height="92" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="440" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="475" y="112" width="50" height="88" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="530" y="130" width="35" height="70" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="570" y="118" width="45" height="82" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="620" y="105" width="40" height="95" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="665" y="90" width="20" height="110" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
+        <rect x="0" y="140" width="60" height="60" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="65" y="120" width="45" height="80" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="115" y="105" width="35" height="95" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="155" y="130" width="50" height="70" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="210" y="115" width="40" height="85" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="255" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="290" y="100" width="55" height="100" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="350" y="118" width="38" height="82" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="393" y="108" width="42" height="92" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="440" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="475" y="112" width="50" height="88" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="530" y="130" width="35" height="70" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="570" y="118" width="45" height="82" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="620" y="105" width="40" height="95" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="665" y="90" width="20" height="110" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
 
         {/* Buildings — right side of sky tower */}
-        <rect x="702" y="90" width="20" height="110" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="727" y="105" width="40" height="95" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="772" y="118" width="45" height="82" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="822" y="130" width="35" height="70" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="862" y="112" width="50" height="88" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="917" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="952" y="108" width="42" height="92" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="999" y="118" width="38" height="82" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1042" y="100" width="55" height="100" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1102" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1137" y="115" width="40" height="85" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1182" y="130" width="50" height="70" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1237" y="105" width="35" height="95" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1277" y="120" width="45" height="80" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1327" y="140" width="60" height="60" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
-        <rect x="1390" y="135" width="10" height="65" fill="url(#bldgGrad)" stroke="rgba(245,245,247,0.06)" strokeWidth="1" rx="1" />
+        <rect x="702" y="90" width="20" height="110" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="727" y="105" width="40" height="95" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="772" y="118" width="45" height="82" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="822" y="130" width="35" height="70" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="862" y="112" width="50" height="88" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="917" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="952" y="108" width="42" height="92" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="999" y="118" width="38" height="82" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1042" y="100" width="55" height="100" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1102" y="125" width="30" height="75" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1137" y="115" width="40" height="85" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1182" y="130" width="50" height="70" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1237" y="105" width="35" height="95" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1277" y="120" width="45" height="80" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1327" y="140" width="60" height="60" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
+        <rect x="1390" y="135" width="10" height="65" fill="url(#bldgGrad)" stroke="rgba(240,240,240,0.06)" strokeWidth="1" rx="1" />
 
         {/* Twinkling windows — scattered */}
-        <circle cx="80" cy="155" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 0.2s infinite' }} />
+        <circle cx="80" cy="155" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 0.2s infinite' }} />
         <circle cx="95" cy="145" r="1.2" fill="#7fb1ff" style={{ animation: 'twinkle 4.5s ease-in-out 1.1s infinite' }} />
-        <circle cx="130" cy="120" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 0.8s infinite' }} />
-        <circle cx="175" cy="148" r="1.2" fill="#f5f5f7" style={{ animation: 'twinkle 4.5s ease-in-out 2.1s infinite' }} />
-        <circle cx="230" cy="130" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 1.5s infinite' }} />
+        <circle cx="130" cy="120" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 0.8s infinite' }} />
+        <circle cx="175" cy="148" r="1.2" fill="#f0f0f0" style={{ animation: 'twinkle 4.5s ease-in-out 2.1s infinite' }} />
+        <circle cx="230" cy="130" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 1.5s infinite' }} />
         <circle cx="310" cy="115" r="1.2" fill="#7fb1ff" style={{ animation: 'twinkle 4.5s ease-in-out 0.4s infinite' }} />
-        <circle cx="330" cy="135" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 3.0s infinite' }} />
-        <circle cx="410" cy="125" r="1.2" fill="#f5f5f7" style={{ animation: 'twinkle 4.5s ease-in-out 1.8s infinite' }} />
-        <circle cx="500" cy="138" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 0.6s infinite' }} />
+        <circle cx="330" cy="135" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 3.0s infinite' }} />
+        <circle cx="410" cy="125" r="1.2" fill="#f0f0f0" style={{ animation: 'twinkle 4.5s ease-in-out 1.8s infinite' }} />
+        <circle cx="500" cy="138" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 0.6s infinite' }} />
         <circle cx="550" cy="142" r="1.2" fill="#7fb1ff" style={{ animation: 'twinkle 4.5s ease-in-out 2.5s infinite' }} />
-        <circle cx="600" cy="122" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 1.2s infinite' }} />
-        <circle cx="750" cy="118" r="1.2" fill="#f5f5f7" style={{ animation: 'twinkle 4.5s ease-in-out 0.9s infinite' }} />
-        <circle cx="800" cy="130" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 2.8s infinite' }} />
+        <circle cx="600" cy="122" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 1.2s infinite' }} />
+        <circle cx="750" cy="118" r="1.2" fill="#f0f0f0" style={{ animation: 'twinkle 4.5s ease-in-out 0.9s infinite' }} />
+        <circle cx="800" cy="130" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 2.8s infinite' }} />
         <circle cx="880" cy="120" r="1.2" fill="#7fb1ff" style={{ animation: 'twinkle 4.5s ease-in-out 1.7s infinite' }} />
-        <circle cx="960" cy="138" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 0.3s infinite' }} />
-        <circle cx="1060" cy="115" r="1.2" fill="#f5f5f7" style={{ animation: 'twinkle 4.5s ease-in-out 2.2s infinite' }} />
-        <circle cx="1120" cy="140" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 1.0s infinite' }} />
+        <circle cx="960" cy="138" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 0.3s infinite' }} />
+        <circle cx="1060" cy="115" r="1.2" fill="#f0f0f0" style={{ animation: 'twinkle 4.5s ease-in-out 2.2s infinite' }} />
+        <circle cx="1120" cy="140" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 1.0s infinite' }} />
         <circle cx="1200" cy="145" r="1.2" fill="#7fb1ff" style={{ animation: 'twinkle 4.5s ease-in-out 3.3s infinite' }} />
-        <circle cx="1290" cy="132" r="1.2" fill="#FBBC05" style={{ animation: 'twinkle 4.5s ease-in-out 0.7s infinite' }} />
+        <circle cx="1290" cy="132" r="1.2" fill="#fbbc04" style={{ animation: 'twinkle 4.5s ease-in-out 0.7s infinite' }} />
 
         {/* Water reflection strip */}
         <rect x="0" y="196" width="1400" height="4" fill="url(#waterGrad)" opacity="0.25" />
         <defs>
           <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
             <stop offset="0%" stopColor="transparent" />
-            <stop offset="30%" stopColor="rgba(245,245,247,0.5)" />
-            <stop offset="70%" stopColor="rgba(245,245,247,0.5)" />
+            <stop offset="30%" stopColor="rgba(240,240,240,0.5)" />
+            <stop offset="70%" stopColor="rgba(240,240,240,0.5)" />
             <stop offset="100%" stopColor="transparent" />
           </linearGradient>
         </defs>
@@ -191,7 +191,7 @@ function AucklandSkyline() {
           right: 0,
           bottom: 0,
           height: 24,
-          background: 'linear-gradient(180deg, rgba(245,245,247,0.04), transparent)',
+          background: 'linear-gradient(180deg, rgba(240,240,240,0.04), transparent)',
           overflow: 'hidden',
         }}
       >
@@ -200,7 +200,7 @@ function AucklandSkyline() {
             position: 'absolute',
             inset: 0,
             background:
-              'linear-gradient(100deg, transparent, rgba(245,245,247,0.09), transparent)',
+              'linear-gradient(100deg, transparent, rgba(240,240,240,0.09), transparent)',
             backgroundSize: '220% 100%',
             animation: 'shimmer 7s linear infinite',
           }}
@@ -265,7 +265,7 @@ export default function Hero() {
         <div
           className="hero-eyebrow"
           style={{
-            fontFamily: '"JetBrains Mono", monospace',
+            fontFamily: '"Roboto Mono", monospace',
             fontSize: 12,
             letterSpacing: '2.5px',
             color: 'var(--text-dim)',
@@ -293,14 +293,14 @@ export default function Hero() {
         {/* Headline */}
         <h1
           style={{
-            fontFamily: '"Space Grotesk", sans-serif',
+            fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
             fontWeight: 600,
             fontSize: 'clamp(40px, 8vw, 90px)',
             lineHeight: 1.04,
             letterSpacing: '-2.5px',
             marginTop: 26,
             zIndex: 1,
-            color: '#f5f5f7',
+            color: '#f0f0f0',
           }}
         >
           <span style={{ display: 'block', overflow: 'hidden' }}>
@@ -323,7 +323,7 @@ export default function Hero() {
                 transform: 'translateY(110%)',
                 animation: 'riseIn 0.95s cubic-bezier(.16,1,.3,1) 0.38s forwards',
                 background:
-                  'linear-gradient(90deg, #4285F4, #34A853 55%, #FBBC05)',
+                  'linear-gradient(90deg, #4285F4, #34A853 55%, #fbbc04)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 color: 'transparent',
@@ -378,11 +378,11 @@ export default function Hero() {
                 gap: 6,
                 padding: '6px 14px',
                 borderRadius: 100,
-                background: 'rgba(245,245,247,0.05)',
-                border: '1px solid rgba(245,245,247,0.09)',
+                background: 'rgba(240,240,240,0.05)',
+                border: '1px solid rgba(240,240,240,0.09)',
                 fontSize: 12.5,
                 color: 'var(--text-dim)',
-                fontFamily: '"Inter", sans-serif',
+                fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
                 whiteSpace: 'nowrap',
               }}
             >
@@ -413,7 +413,7 @@ export default function Hero() {
               background: 'rgba(66,133,244,0.12)',
               border: '1px solid rgba(66,133,244,0.3)',
               fontSize: 11,
-              fontFamily: '"JetBrains Mono", monospace',
+              fontFamily: '"Roboto Mono", monospace',
               letterSpacing: '1.5px',
               color: '#4285F4',
               textTransform: 'uppercase',
@@ -439,7 +439,7 @@ export default function Hero() {
               className="countdown-sep"
               style={{
                 alignSelf: 'center',
-                fontFamily: '"JetBrains Mono", monospace',
+                fontFamily: '"Roboto Mono", monospace',
                 fontSize: 28,
                 color: 'var(--text-dimmer)',
                 lineHeight: 1,
@@ -453,7 +453,7 @@ export default function Hero() {
               className="countdown-sep"
               style={{
                 alignSelf: 'center',
-                fontFamily: '"JetBrains Mono", monospace',
+                fontFamily: '"Roboto Mono", monospace',
                 fontSize: 28,
                 color: 'var(--text-dimmer)',
                 lineHeight: 1,
@@ -467,7 +467,7 @@ export default function Hero() {
               className="countdown-sep"
               style={{
                 alignSelf: 'center',
-                fontFamily: '"JetBrains Mono", monospace',
+                fontFamily: '"Roboto Mono", monospace',
                 fontSize: 28,
                 color: 'var(--text-dimmer)',
                 lineHeight: 1,
@@ -500,9 +500,9 @@ export default function Hero() {
               borderRadius: 100,
               fontSize: 14.5,
               fontWeight: 500,
-              fontFamily: '"Inter", sans-serif',
-              background: '#f5f5f7',
-              color: '#08090b',
+              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
+              background: '#57caff',
+              color: '#000000',
               display: 'inline-flex',
               alignItems: 'center',
               gap: 8,
@@ -510,11 +510,11 @@ export default function Hero() {
             }}
             onMouseEnter={e => {
               e.currentTarget.style.transform = 'translateY(-2px)'
-              e.currentTarget.style.background = '#ffffff'
+              e.currentTarget.style.background = '#7fd6ff'
             }}
             onMouseLeave={e => {
               e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.background = '#f5f5f7'
+              e.currentTarget.style.background = '#57caff'
             }}
           >
             Submit Your Talk
@@ -529,9 +529,9 @@ export default function Hero() {
               borderRadius: 100,
               fontSize: 14.5,
               fontWeight: 500,
-              fontFamily: '"Inter", sans-serif',
-              border: '1px solid rgba(245,245,247,0.12)',
-              color: '#f5f5f7',
+              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
+              border: '1px solid rgba(240,240,240,0.12)',
+              color: '#f0f0f0',
               background: 'transparent',
               display: 'inline-flex',
               alignItems: 'center',
@@ -540,11 +540,11 @@ export default function Hero() {
             }}
             onMouseEnter={e => {
               e.currentTarget.style.transform = 'translateY(-2px)'
-              e.currentTarget.style.borderColor = 'rgba(245,245,247,0.35)'
+              e.currentTarget.style.borderColor = 'rgba(240,240,240,0.35)'
             }}
             onMouseLeave={e => {
               e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.borderColor = 'rgba(245,245,247,0.12)'
+              e.currentTarget.style.borderColor = 'rgba(240,240,240,0.12)'
             }}
           >
             View Sponsor Prospectus

@@ -51,7 +51,7 @@ function AccordionItem({
   return (
     <div
       style={{
-        borderBottom: '1px solid rgba(245,245,247,0.07)',
+        borderBottom: '1px solid rgba(240,240,240,0.07)',
         overflow: 'hidden',
       }}
     >
@@ -75,7 +75,7 @@ function AccordionItem({
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
           <span
             style={{
-              fontFamily: '"JetBrains Mono", monospace',
+              fontFamily: '"Roboto Mono", monospace',
               fontSize: 11,
               color: isOpen ? '#4285F4' : 'var(--text-dimmer)',
               letterSpacing: '0.5px',
@@ -88,10 +88,10 @@ function AccordionItem({
           </span>
           <span
             style={{
-              fontFamily: '"Space Grotesk", sans-serif',
+              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
               fontWeight: 500,
               fontSize: 'clamp(14px, 2vw, 17px)',
-              color: isOpen ? '#f5f5f7' : 'var(--text-dim)',
+              color: isOpen ? '#f0f0f0' : 'var(--text-dim)',
               lineHeight: 1.45,
               transition: 'color 0.25s ease',
             }}
@@ -108,14 +108,14 @@ function AccordionItem({
             width: 28,
             height: 28,
             borderRadius: '50%',
-            border: '1px solid rgba(245,245,247,0.10)',
+            border: '1px solid rgba(240,240,240,0.10)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             transition: 'transform 0.3s ease, background 0.25s ease, border-color 0.25s ease',
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
             background: isOpen ? 'rgba(66,133,244,0.15)' : 'transparent',
-            borderColor: isOpen ? 'rgba(66,133,244,0.35)' : 'rgba(245,245,247,0.10)',
+            borderColor: isOpen ? 'rgba(66,133,244,0.35)' : 'rgba(240,240,240,0.10)',
           }}
         >
           <svg viewBox="0 0 16 16" fill="none" width={12} height={12}>

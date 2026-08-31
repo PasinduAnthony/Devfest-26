@@ -1,57 +1,50 @@
 import { useEffect, useRef } from 'react'
+import keynoteHall from '../assets/moments/keynote_hall.jpg'
+import speakerSessions from '../assets/moments/speaker_sessions.jpg'
+import workshops from '../assets/moments/workshops.jpg'
+import networking from '../assets/moments/networking.jpg'
+import lightningTalks from '../assets/moments/lightning_talks.jpg'
+import communityLunch from '../assets/moments/Community_lunch.jpg'
 
 const MOMENTS = [
   {
     label: 'Keynote Hall',
     sublabel: 'Opening ceremony & main stage',
-    gradient: 'linear-gradient(135deg, #4285F4 0%, #1a3a6b 100%)',
     accent: '#4285F4',
+    photo: keynoteHall,
   },
   {
     label: 'Speaker Sessions',
     sublabel: 'Technical deep dives & demos',
-    gradient: 'linear-gradient(135deg, #EA4335 0%, #6b1a1a 100%)',
     accent: '#EA4335',
+    photo: speakerSessions,
   },
   {
     label: 'Workshops',
     sublabel: 'Hands-on learning labs',
-    gradient: 'linear-gradient(135deg, #34A853 0%, #1a4a2e 100%)',
     accent: '#34A853',
+    photo: workshops,
   },
   {
     label: 'Networking',
     sublabel: 'Community connect & ice cream',
-    gradient: 'linear-gradient(135deg, #FBBC05 0%, #6b4e00 100%)',
-    accent: '#FBBC05',
-  },
-  {
-    label: 'Breakout Tracks',
-    sublabel: 'AI, Cloud, Mobile & Web',
-    gradient: 'linear-gradient(135deg, #4285F4 0%, #34A853 100%)',
-    accent: '#4285F4',
+    accent: '#fbbc04',
+    photo: networking,
   },
   {
     label: 'Lightning Talks',
     sublabel: '5-minute rapid-fire ideas',
-    gradient: 'linear-gradient(135deg, #EA4335 0%, #FBBC05 100%)',
     accent: '#EA4335',
+    photo: lightningTalks,
   },
   {
     label: 'Community Lunch',
     sublabel: 'Meet the speakers',
-    gradient: 'linear-gradient(135deg, #34A853 0%, #4285F4 100%)',
     accent: '#34A853',
-  },
-  {
-    label: 'After Party',
-    sublabel: 'Networking & refreshments',
-    gradient: 'linear-gradient(135deg, #FBBC05 0%, #EA4335 100%)',
-    accent: '#FBBC05',
+    photo: communityLunch,
   },
 ]
 
-// Duplicate array for seamless infinite loop
 const TRACK = [...MOMENTS, ...MOMENTS]
 
 interface MomentCardProps {
@@ -68,29 +61,21 @@ function MomentCard({ item }: MomentCardProps) {
         borderRadius: 14,
         overflow: 'hidden',
         position: 'relative',
-        border: '1px solid rgba(245,245,247,0.07)',
+        border: '1px solid rgba(240,240,240,0.07)',
         cursor: 'default',
         marginRight: 16,
       }}
     >
-      {/* Gradient placeholder */}
-      <div
+      {/* Actual photo */}
+      <img
+        src={item.photo}
+        alt={item.label}
         style={{
           position: 'absolute',
           inset: 0,
-          background: item.gradient,
-          opacity: 0.25,
-        }}
-      />
-
-      {/* Grid pattern overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage:
-            'linear-gradient(rgba(245,245,247,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(245,245,247,0.03) 1px, transparent 1px)',
-          backgroundSize: '24px 24px',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
         }}
       />
 
@@ -105,33 +90,9 @@ function MomentCard({ item }: MomentCardProps) {
           borderRadius: '50%',
           background: item.accent,
           boxShadow: `0 0 12px ${item.accent}`,
+          zIndex: 1,
         }}
       />
-
-      {/* Photo placeholder indicator */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 8,
-          opacity: 0.35,
-        }}
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 24 24" fill="none" width={28} height={28}>
-          <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="8.5" cy="8.5" r="2" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M3 15l5-5 4 4 3-3 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <span style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 9, letterSpacing: '1px', textTransform: 'uppercase', color: '#f5f5f7' }}>
-          Photos coming soon
-        </span>
-      </div>
 
       {/* Label */}
       <div
@@ -140,24 +101,24 @@ function MomentCard({ item }: MomentCardProps) {
           bottom: 0,
           left: 0,
           right: 0,
-          padding: '20px 16px 16px',
-          background:
-            'linear-gradient(0deg, rgba(8,9,11,0.95) 0%, transparent 100%)',
+          padding: '32px 16px 16px',
+          background: 'linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%)',
+          zIndex: 1,
         }}
       >
         <div
           style={{
-            fontFamily: '"Space Grotesk", sans-serif',
+            fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
             fontSize: 15,
             fontWeight: 600,
-            color: '#f5f5f7',
+            color: '#f0f0f0',
           }}
         >
           {item.label}
         </div>
         <div
           style={{
-            fontFamily: '"JetBrains Mono", monospace',
+            fontFamily: '"Roboto Mono", monospace',
             fontSize: 10,
             letterSpacing: '1px',
             color: item.accent,
@@ -198,7 +159,7 @@ export default function Highlights() {
       style={{
         padding: '100px 0',
         overflow: 'hidden',
-        borderTop: '1px solid rgba(245,245,247,0.06)',
+        borderTop: '1px solid rgba(240,240,240,0.06)',
       }}
     >
       {/* Header */}
@@ -230,8 +191,7 @@ export default function Highlights() {
             top: 0,
             bottom: 0,
             width: 80,
-            background:
-              'linear-gradient(90deg, #08090b 0%, transparent 100%)',
+            background: 'linear-gradient(90deg, #000000 0%, transparent 100%)',
             zIndex: 2,
             pointerEvents: 'none',
           }}
@@ -245,8 +205,7 @@ export default function Highlights() {
             top: 0,
             bottom: 0,
             width: 80,
-            background:
-              'linear-gradient(270deg, #08090b 0%, transparent 100%)',
+            background: 'linear-gradient(270deg, #000000 0%, transparent 100%)',
             zIndex: 2,
             pointerEvents: 'none',
           }}

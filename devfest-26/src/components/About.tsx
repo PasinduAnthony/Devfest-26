@@ -20,7 +20,7 @@ const PILLARS = [
     title: 'Cloud & DevOps',
     description:
       'Google Cloud Platform, Kubernetes, Serverless, and Scalable Architecture.',
-    color: '#FBBC05',
+    color: '#fbbc04',
     colorRgba: 'rgba(251,188,5,0.10)',
   },
   {
@@ -160,7 +160,7 @@ export default function About() {
             onMouseLeave={e => {
               const el = e.currentTarget as HTMLElement
               el.style.transform = 'translateY(0)'
-              el.style.borderColor = 'rgba(245,245,247,0.07)'
+              el.style.borderColor = 'rgba(240,240,240,0.07)'
               el.style.boxShadow = 'none'
             }}
           >
@@ -176,31 +176,14 @@ export default function About() {
               }}
             />
 
-            {/* Icon */}
-            <div
-              style={{
-                fontSize: 28,
-                marginBottom: 16,
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: 52,
-                height: 52,
-                borderRadius: 12,
-                background: pillar.colorRgba,
-              }}
-            >
-              {pillar.icon}
-            </div>
-
             <h3
               style={{
-                fontFamily: '"Space Grotesk", sans-serif',
+                fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
                 fontSize: 18,
                 fontWeight: 600,
                 letterSpacing: '-0.2px',
                 marginBottom: 10,
-                color: '#f5f5f7',
+                color: '#f0f0f0',
               }}
             >
               {pillar.title}

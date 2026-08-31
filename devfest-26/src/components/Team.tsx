@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import logoImg from '../assets/GDG Logo.png'
 import dilumPhoto from '../assets/team/dilum.jpeg'
 import juliusPhoto from '../assets/team/julius.jpeg'
 import nickPhoto from '../assets/team/nick.jpeg'
@@ -34,7 +35,7 @@ const COMMUNITY_LEADS: TeamMember[] = [
     role: 'Organizer',
     photo: nickPhoto,
     linkedin: 'https://www.linkedin.com/in/nic-tolentino/',
-    accentColor: '#FBBC05',
+    accentColor: '#fbbc04',
   },
   {
     name: 'Ramod Kaushan',
@@ -105,7 +106,7 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
       }}
       onMouseLeave={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.borderColor = 'rgba(245,245,247,0.07)'
+        el.style.borderColor = 'rgba(240,240,240,0.07)'
         el.style.transform = 'translateY(0)'
       }}
     >
@@ -127,10 +128,10 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
       <div style={{ flex: 1 }}>
         <div
           style={{
-            fontFamily: '"Space Grotesk", sans-serif',
+            fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
             fontWeight: 600,
             fontSize: 15,
-            color: '#f5f5f7',
+            color: '#f0f0f0',
             marginBottom: 4,
           }}
         >
@@ -138,7 +139,7 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
         </div>
         <div
           style={{
-            fontFamily: '"JetBrains Mono", monospace',
+            fontFamily: '"Roboto Mono", monospace',
             fontSize: 10.5,
             letterSpacing: '0.5px',
             color: 'var(--text-dim)',
@@ -162,8 +163,8 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
           width: 28,
           height: 28,
           borderRadius: '50%',
-          background: 'rgba(245,245,247,0.06)',
-          border: '1px solid rgba(245,245,247,0.10)',
+          background: 'rgba(240,240,240,0.06)',
+          border: '1px solid rgba(240,240,240,0.10)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -174,8 +175,8 @@ function MemberCard({ member, delay = 0 }: MemberCardProps) {
           e.currentTarget.style.borderColor = 'rgba(66,133,244,0.4)'
         }}
         onMouseLeave={e => {
-          e.currentTarget.style.background = 'rgba(245,245,247,0.06)'
-          e.currentTarget.style.borderColor = 'rgba(245,245,247,0.10)'
+          e.currentTarget.style.background = 'rgba(240,240,240,0.06)'
+          e.currentTarget.style.borderColor = 'rgba(240,240,240,0.10)'
         }}
       >
         <svg viewBox="0 0 24 24" fill="currentColor" width={13} height={13} style={{ color: '#8d8f96' }}>
@@ -231,14 +232,14 @@ export default function Team() {
       <div style={{ marginBottom: 60 }}>
         <div
           style={{
-            fontFamily: '"JetBrains Mono", monospace',
+            fontFamily: '"Roboto Mono", monospace',
             fontSize: 10.5,
             letterSpacing: '2px',
             color: 'var(--text-dimmer)',
             textTransform: 'uppercase',
             marginBottom: 24,
             paddingBottom: 12,
-            borderBottom: '1px solid rgba(245,245,247,0.06)',
+            borderBottom: '1px solid rgba(240,240,240,0.06)',
           }}
         >
           GDG Auckland Community Leads
@@ -270,19 +271,16 @@ export default function Team() {
           gap: 24,
         }}
       >
-        <div style={{ display: 'flex', gap: 4, flexShrink: 0 }} aria-hidden="true">
-          {['#4285F4', '#EA4335', '#FBBC05', '#34A853'].map((c) => (
-            <span
-              key={c}
-              style={{ display: 'block', width: 10, height: 10, borderRadius: '50%', background: c }}
-            />
-          ))}
-        </div>
+        <img
+          src={logoImg}
+          alt="GDG Logo"
+          style={{ height: 56, flexShrink: 0 }}
+        />
 
         <div style={{ flex: 1, minWidth: 240 }}>
           <div
             style={{
-              fontFamily: '"JetBrains Mono", monospace',
+              fontFamily: '"Roboto Mono", monospace',
               fontSize: 10,
               letterSpacing: '2px',
               color: 'var(--text-dimmer)',
@@ -294,10 +292,10 @@ export default function Team() {
           </div>
           <div
             style={{
-              fontFamily: '"Space Grotesk", sans-serif',
+              fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
               fontSize: 17,
               fontWeight: 600,
-              color: '#f5f5f7',
+              color: '#f0f0f0',
               marginBottom: 10,
             }}
           >

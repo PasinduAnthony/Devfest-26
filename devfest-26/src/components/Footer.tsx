@@ -1,3 +1,5 @@
+import logoImg from '../assets/GDG Logo.png'
+
 const QUICK_LINKS = [
   { label: 'Code of Conduct', href: '#' },
   { label: 'Participation Terms', href: '#' },
@@ -10,7 +12,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        borderTop: '1px solid rgba(245,245,247,0.07)',
+        borderTop: '1px solid rgba(240,240,240,0.07)',
         padding: '48px 40px 56px',
       }}
     >
@@ -34,62 +36,37 @@ export default function Footer() {
           }}
         >
           {/* Logo */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 10,
-              fontFamily: '"Space Grotesk", sans-serif',
-              fontWeight: 600,
-              fontSize: 15,
-              color: '#f5f5f7',
-            }}
-          >
-            <span style={{ display: 'flex', gap: 4 }} aria-hidden="true">
-              <span
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: '50%',
-                  background: '#4285F4',
-                  display: 'block',
-                }}
-              />
-              <span
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: '50%',
-                  background: '#EA4335',
-                  display: 'block',
-                }}
-              />
-              <span
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: '50%',
-                  background: '#FBBC05',
-                  display: 'block',
-                }}
-              />
-              <span
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: '50%',
-                  background: '#34A853',
-                  display: 'block',
-                }}
-              />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ display: 'inline-flex' }}>
+              <img src={logoImg} alt="" aria-hidden="true" style={{ height: 24, display: 'block' }} />
             </span>
-            DevFest Auckland 2026
+            <span
+              style={{
+                fontFamily: '"Google Sans", "Nunito Sans", sans-serif',
+                fontWeight: 700,
+                fontSize: 15,
+                letterSpacing: '-0.3px',
+                color: '#f0f0f0',
+              }}
+            >
+              DevFest{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(90deg, #4285F4, #34A853)',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                }}
+              >
+                Auckland
+              </span>
+            </span>
           </div>
 
           {/* Tagline */}
           <div
             style={{
-              fontFamily: '"JetBrains Mono", monospace',
+              fontFamily: '"Roboto Mono", monospace',
               fontSize: 10.5,
               letterSpacing: '1px',
               color: 'var(--text-dimmer)',
@@ -141,7 +118,7 @@ export default function Footer() {
         <div
           style={{
             height: 1,
-            background: 'rgba(245,245,247,0.06)',
+            background: 'rgba(240,240,240,0.06)',
           }}
         />
 
@@ -150,7 +127,7 @@ export default function Footer() {
           style={{
             fontSize: 11.5,
             color: 'var(--text-dimmer)',
-            fontFamily: '"JetBrains Mono", monospace',
+            fontFamily: '"Roboto Mono", monospace',
             letterSpacing: '0.3px',
           }}
         >
